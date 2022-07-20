@@ -7,7 +7,7 @@ public class RadioTest {
 
     @Test
     public void shouldUpsetCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(12);
 
@@ -18,7 +18,7 @@ public class RadioTest {
 
     @Test
     public void shouldLowCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(-2);
 
@@ -29,30 +29,30 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
-        rad.setCurrentVolume(9);
+        rad.setCurrentVolume(5);
 
-        int expected = 9;
+        int expected = 5;
         int actual = rad.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldIncreaseCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
-        rad.setCurrentVolume(8);
+        rad.setCurrentVolume(3);
         rad.increaseVolume();
 
-        int expected = 9;
+        int expected = 4;
         int actual = rad.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void notShouldIncreaseCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(10);
         rad.increaseVolume();
@@ -64,19 +64,19 @@ public class RadioTest {
 
     @Test
     public void shouldDecreaseCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
-        rad.setCurrentVolume(9);
+        rad.setCurrentVolume(3);
         rad.decreaseVolume();
 
-        int expected = 8;
+        int expected = 2;
         int actual = rad.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void notShouldDecreaseCurrentVolume() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(0);
         rad.decreaseVolume();
@@ -88,7 +88,7 @@ public class RadioTest {
 
     @Test
     public void shouldUpCurrentStation() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
         rad.setCurrentStation(12);
 
@@ -99,7 +99,7 @@ public class RadioTest {
 
     @Test
     public void shouldLowCurrentStation() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
         rad.setCurrentStation(-2);
 
@@ -110,30 +110,30 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentStation() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
 
-        rad.setCurrentStation(0);
+        rad.setCurrentStation(6);
 
-        int expected = 0;
+        int expected = 6;
         int actual = rad.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldSetIncreaseStation() {
-        Radio rad = new Radio(10);
+        Radio rad = new Radio();
 
-        rad.setCurrentStation(8);
+        rad.setCurrentStation(4);
         rad.increaseStation();
 
-        int expected = 9;
+        int expected = 5;
         int actual = rad.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void notShouldSetIncreaseStation() {
-        Radio rad = new Radio(0);
+        Radio rad = new Radio();
 
         rad.setCurrentStation(9);
         rad.increaseStation();
@@ -145,7 +145,7 @@ public class RadioTest {
 
     @Test
     public void ShouldSetDecreaseStation() {
-        Radio rad = new Radio(10);
+        Radio rad = new Radio();
 
         rad.setCurrentStation(4);
         rad.decreaseStation();
@@ -157,7 +157,7 @@ public class RadioTest {
 
     @Test
     public void notShouldSetDecreaseStation() {
-        Radio rad = new Radio(9);
+        Radio rad = new Radio();
 
         rad.setCurrentStation(0);
         rad.decreaseStation();
