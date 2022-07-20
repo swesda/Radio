@@ -8,6 +8,15 @@ public class Radio {
     private int minStation = 0;
     private int maxStation = 9;
 
+    public Radio(int maxStation, int minStation) {
+        this.minStation = minStation;
+        this.maxStation = maxStation;
+    }
+
+    public Radio(int size) {
+        maxStation = minStation + size;
+    }
+
     public int getMinVolume() {
         return minVolume;
     }
