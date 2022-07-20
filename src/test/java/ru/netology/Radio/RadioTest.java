@@ -7,7 +7,7 @@ public class RadioTest {
 
     @Test
     public void shouldUpsetCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(12);
 
@@ -18,7 +18,7 @@ public class RadioTest {
 
     @Test
     public void shouldLowCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(-2);
 
@@ -29,7 +29,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(9);
 
@@ -40,7 +40,7 @@ public class RadioTest {
 
     @Test
     public void shouldIncreaseCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(8);
         rad.increaseVolume();
@@ -52,7 +52,7 @@ public class RadioTest {
 
     @Test
     public void notShouldIncreaseCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(10);
         rad.increaseVolume();
@@ -64,7 +64,7 @@ public class RadioTest {
 
     @Test
     public void shouldDecreaseCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(9);
         rad.decreaseVolume();
@@ -76,7 +76,7 @@ public class RadioTest {
 
     @Test
     public void notShouldDecreaseCurrentVolume() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentVolume(0);
         rad.decreaseVolume();
@@ -88,7 +88,7 @@ public class RadioTest {
 
     @Test
     public void shouldUpCurrentStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentStation(12);
 
@@ -99,7 +99,7 @@ public class RadioTest {
 
     @Test
     public void shouldLowCurrentStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentStation(-2);
 
@@ -110,7 +110,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(1);
 
         rad.setCurrentStation(0);
 
@@ -121,7 +121,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetIncreaseStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(10);
 
         rad.setCurrentStation(8);
         rad.increaseStation();
@@ -133,7 +133,7 @@ public class RadioTest {
 
     @Test
     public void notShouldSetIncreaseStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(0);
 
         rad.setCurrentStation(9);
         rad.increaseStation();
@@ -145,7 +145,7 @@ public class RadioTest {
 
     @Test
     public void ShouldSetDecreaseStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(10);
 
         rad.setCurrentStation(4);
         rad.decreaseStation();
@@ -157,7 +157,7 @@ public class RadioTest {
 
     @Test
     public void notShouldSetDecreaseStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(9);
 
         rad.setCurrentStation(0);
         rad.decreaseStation();
