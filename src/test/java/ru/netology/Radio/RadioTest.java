@@ -158,7 +158,7 @@ public class RadioTest {
     public void shouldUpCurrentStation() {
         Radio rad = new Radio();
 
-        rad.setCurrentStation(12);
+        rad.setCurrentStation(13);
         rad.setMaxStation(9);
         rad.setMinStation(0);
 
