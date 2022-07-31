@@ -159,7 +159,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(13);
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 9;
@@ -172,7 +172,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(-2);
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 0;
@@ -185,7 +185,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(6);
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 6;
@@ -199,7 +199,7 @@ public class RadioTest {
 
         rad.setCurrentStation(4);
         rad.increaseStation();
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 5;
@@ -213,7 +213,7 @@ public class RadioTest {
 
         rad.setCurrentStation(9);
         rad.increaseStation();
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 0;
@@ -227,7 +227,7 @@ public class RadioTest {
 
         rad.setCurrentStation(4);
         rad.decreaseStation();
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 3;
@@ -241,7 +241,7 @@ public class RadioTest {
 
         rad.setCurrentStation(0);
         rad.decreaseStation();
-        rad.setMaxStation(9);
+        rad.setStationsCount(9);
         rad.setMinStation(0);
 
         int expected = 9;
